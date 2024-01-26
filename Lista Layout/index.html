@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="./estilo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="menu-lateral">
+        <img src="./image/fotologo.png" alt="Ícone Padrão" />
+        <h2>Marco Costa</h2>
+        <p>Olá, meu nome é Marco
+            estou fazendo um teste,
+            são desafios que tenho que cumprir até
+            dia 14/01, posterior tenho outras estapas.
+            Fiz uma lista de minhas tarefas que gostaria de fazer
+        diariamente.
+    Abaixo estão minhas redes sociais</p>
+
+        <div class="links">
+            <img src="./image/linkedin-removebg-preview.png">
+            <a href="https://www.linkedin.com/in/marco-rodrigues-93a45aa3/">LinkedIn</a>
+            
+
+            <img src="./image/github-removebg-preview.png">
+            <a href="https://m4rkdevs.github.io/projetos/">Github</a>
+            
+
+            <img src="./image/instagram-removebg-preview.png">
+            <a href="https://www.instagram.com">Instagram</a>
+            
+
+            <img src="./image/whatsaap-removebg-preview.png">
+            <a href="https://wa.me/5551983143583">WhatsApp</a>
+        </div>
+
+    </div>
+    </div>
+
+    <div class="area-principal">
+        <div class="lista-tarefas-container">
+            <h2 class="titulo-lista-tarefas">Lista de Tarefas</h2>
+
+            <div class="listas-tarefas">
+                <div class="lista-tarefas">
+                    <h2>Dia</h2>
+                    <input type="text" id="tarefaDia" class="tarefa-input" placeholder="Nova tarefa">
+
+                    <button onclick="adicionarTarefa('tarefaDia', 'listaDia')">Adicionar</button>
+                    <button onclick="removerTodasTarefas('listaDia')">Remover Todas</button>
+                    <ul id="listaDia">
+                        <li>Acordar 07:00</li>
+                        <li>Tomar banho 07:10</li>
+                        <li>Tomar Café 07:30</li>
+                        <li>Ler Noticias 07:45</li>
+                        <li>Pegar ônibus 08:15</li>
+                        <li>Chegar no trabalho 08:40</li>
+                        <li>Reuniões tarefas 09:00</li>
+                        
+                    </ul>
+                </div>
+
+                <div class="lista-tarefas">
+                    <h2>Noite</h2>
+                    <input type="text" id="tarefaNoite" class="tarefa-input" placeholder="Nova tarefa">
+                    <button onclick="adicionarTarefa('tarefaNoite', 'listaNoite')">Adicionar</button>
+                    <button onclick="removerTodasTarefas('listaNoite')">Remover Todas</button>
+                    <ul id="listaNoite">
+                        <li>Saída trab. 18h</li>
+                        <li>Pegar ônibus 18:15</li>
+                        <li>Chegada Academia 18:45</li>
+                        <li>Saída Academia 19:30</li>
+                        <li>Fazer Janda 20:00</li>
+                        <li>Tomar banho 20:45</li>
+                        <li>Estudar 21:30</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function adicionarTarefa(inputId, listaId) {
+            const input = document.getElementById(inputId);
+            const lista = document.getElementById(listaId);
+            const novaTarefa = input.value.trim();
+
+            if (novaTarefa !== '') {
+                const novaLi = document.createElement('li');
+                novaLi.textContent = novaTarefa;
+
+                const btnRemover = document.createElement('button');
+                btnRemover.textContent = 'Remover';
+                btnRemover.className = 'btn-remover';
+                btnRemover.onclick = function () {
+                    lista.removeChild(novaLi);
+                };
+
+                novaLi.appendChild(btnRemover);
+                lista.appendChild(novaLi);
+                input.value = '';
+            }
+        }
+
+        function removerTodasTarefas(listaId) {
+            const lista = document.getElementById(listaId);
+            while (lista.firstChild) {
+                lista.removeChild(lista.firstChild);
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,231 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    margin-bottom: 0;
+    padding: 0;
+   
+    display: flex;
+    
+}
+p{
+    justify-content: center;
+    align-items:center;
+    text-align: justify;
+    font-size:1rem;
+    padding-top: -5px;
+}
+/*button {
+    font-size: 15px;
+    background-color: #fdd806;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transform: rotate(29px);
+}
+
+/*.hover.button {
+    background-color: #4d6dd6;
+    cursor: pointer;
+
+
+}
+*/
+
+.menu-lateral {
+    width: 230px;
+    background-color: #cae4ee;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-right: 2px solid #ddd;
+    
+}
+
+.menu-lateral img {
+    max-width: 200px;
+    width: 200px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-left: 10px;
+    border-radius: 50%;
+
+
+}
+.links img{
+    width: 30px; /* Altere o valor conforme necessário */
+    height: 30px; /* Altere o valor conforme necessário */
+    text-decoration: none;
+    margin-right: 5px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.links {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+}
+
+
+
+.menu-lateral h2{
+    text-align: center;
+    margin: 5px 0;
+}
+.menu-lateral a {
+    text-align: center;
+    margin-top:5px;
+    margin-bottom: 5px;
+    text-decoration: none;
+    color: rgb(12, 12, 12);
+    background-color: #5096d8;
+    border-radius: 40px;
+    padding: 8px;
+    
+
+}
+.menu-lateral a:hover {
+    background-color: #2C0735;
+    color: white;
+    transition-duration:0.45s;
+    font-size: 1.1rem;
+}
+
+.area-principal {
+    flex-grow: 1;
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: first baseline;
+    background-image: linear-gradient(180deg,#5096d8,#2C0735);
+    height: 100hv;
+    list-style: disc;
+    border: solid 1px black;
+   
+}
+
+.titulo-lista-tarefas {
+    text-align: center;
+    margin-top: 30px;
+    margin-left: 4px;
+    margin-right: 4px;
+    border-color: #b33131;
+    color: rgb(10, 10, 10);
+    font-size: 2.2rem;
+    padding-bottom: 10px;
+}
+
+.listas-tarefas {
+    display: flex;
+    /* Exibe as listas em linha */
+    gap: 20px;
+    /* Adiciona um espaçamento entre as listas */
+    justify-content: center;
+    /* Centraliza as listas horizontalmente */
+    background-color: #ffffff;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: -25px;
+    height: 100hv;
+    width: 100hv;
+    text-align: left;
+   
+    
+}
+.lista-tarefas ul li{
+    list-style-type:disc;
+    font-size: 1.1rem;
+    padding-bottom: 3px;
+    
+}
+
+
+.lista-tarefas {
+    width: 50%;
+    max-width: 300px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.1rem;
+    text-align: left;
+    border-right: solid 1px black;
+    
+
+}
+button:hover{
+   background-color:#5096d8;
+   transition-duration:0.50s;
+   cursor: pointer;
+   font-size: 0.9rem;
+   color: white;
+}
+
+.lista-tarefas h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.lista-tarefas:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.tarefa-input {
+    width: 80%;
+    margin-bottom: 10px;
+}
+
+.btn-adicionar,
+.btn-remover {
+    background-color: #152716;
+    color: rgb(252, 252, 251);
+    border: none;
+    padding-left: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin-right: 5px;
+    cursor: pointer;
+    border-radius: 25px -0px 0px 25px;
+
+}
+
+.btn-remover {
+    background-color: #f77777;
+}
+.btn-adicionar,
+.btn-remover:hover{
+    background-color: rgb(255, 0, 0);
+    color: yellow;
+}
+
+@media only screen and (max-width: 768px) {
+    .body {
+        flex-direction: column;
+    }
+
+    .menu-lateral {
+        width: 50%;
+        border-right: none;
+    }
+
+    .listas-tarefas {
+        flex-direction: column;
+    }
+
+    .lista-tarefas {
+        width: 100%;
+        border-right: none;
+    }
+
+    .area-principal {
+        padding-top: 10px;
+    }
+}
+
+
